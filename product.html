@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><body>
+<img id="product-img" width="300">
+<h2 id="product-name"></h2>
+<p id="product-price"></p>
+<a id="pay-btn" target="_blank">Pay Now</a>
+<script>
+const p=new URLSearchParams(window.location.search);
+document.getElementById("product-name").innerText=p.get("name");
+document.getElementById("product-price").innerText="₹"+p.get("price");
+document.getElementById("product-img").src=p.get("img");
+document.getElementById("pay-btn").href=p.get("link");
+</script></body></html>
